@@ -1,0 +1,1051 @@
+body {
+    background: #f6f9fe url(https://mat1.gtimg.com/qqcdn/tupload/1630660726331.jpg) no-repeat center top;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    font-weight: normal;
+    font-size: value;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body, html {
+    font: 12px/18px Helvetica, Arial, sans-serif;
+}
+
+/* 中间总宽度 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 导航栏 */
+.mynav {
+    background-color: transparent;
+    height: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, .24);
+    margin-bottom: 42px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 右侧导航 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+
+/* 地址 */
+.city-dingwei {
+    height: 100%;
+    line-height: 64px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 12px;
+    position: relative;
+}
+
+.city-dingwei:hover #ct-attention {
+    display: block;
+}
+
+/* 关注的城市 */
+#ct-attention {
+    position: absolute;
+    display: none;
+    width: 418px;
+    min-height: 86px;
+    background: #fff;
+    left: 8px;
+    top: 53px;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+    border-radius: 5px;
+    padding: 17px 0;
+    z-index: 1;
+}
+
+
+#ct-attention #titl {
+    text-align: left;
+    font-size: 12px;
+    color: #9f9f9f;
+    height: 17px;
+    line-height: 17px;
+    margin-left: 20px;
+}
+
+#ct-attention #ls-attention {
+    text-align: left;
+    margin-top: 15px;
+}
+
+#ct-attention #ls-attention .city {
+    height: 32px;
+    line-height: 32px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #555;
+    letter-spacing: 0;
+}
+
+.btn-set-default{
+    display: none;
+}
+
+#ct-attention #ls-attention .city:hover .btn-set-default{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#ct-attention #ls-attention .city:hover .btn-delete{
+    display: inline-block;
+    vertical-align: middle;
+} 
+#ct-attention #ls-attention .city:hover{
+    background-color: #f4f4f4;
+}
+/* 郑州市 */
+#ct-attention #ls-attention .city .ct-location {
+    float: left;
+    width: 146px;
+}
+
+/* 设置默认 */
+#ct-attention #ls-attention .city .location {
+    display: inline-block;
+}
+
+#ct-attention #ls-attention .city .btn-cancel, #ct-attention #ls-attention .city .btn-set-default {
+    font-size: 12px;
+    color: #777;
+    background: #f7f7f7;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 4px;
+    margin-left: 5px;
+}
+
+#ct-attention #ls-attention .city .icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+#ct-attention #ls-attention .city .weather {
+    display: inline-block;
+    width: 116px;
+}
+
+#ct-attention #ls-attention .city .temperature {
+    display: inline-block;
+    width: 66px;
+    text-align: right;
+}
+
+#ct-attention #ls-attention .city .btn-delete {
+    height: 15px;
+    width: 15px;
+    margin-top: -20px;
+    margin-left: 12px;
+    display: none;
+}
+
+/* 关注 */
+.love {
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    opacity: .7;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+
+/* 搜索框 */
+.sch-box {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    font-size: 14px;
+}
+
+#ls-match{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    overflow: auto;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    max-height: 210px;
+    margin-top: 4px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#ls-match li{
+    color:#777;
+    text-align: left;
+}
+
+.sch-box .had-sch {
+    font-family: "Microsoft Yahei";
+    border-radius: 49px;
+    background: rgba(255, 255, 255, .2);
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 277px;
+    padding: 5px 13px;
+    color: rgba(255, 255, 255, .7);
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.sch-box .had-sch::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+#hot-city {
+    display: none;
+    width: 277px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: absolute;
+    top: 35px;
+    padding: 20px 20px 10px 20px;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#hot-city .dingwei {
+    font-size: 12px;
+    color: #9f9f9f;
+    height: 12px;
+    line-height: 12px;
+    margin-bottom: 8px;
+    margin-top: 2px;
+    clear: both;
+}
+
+
+#hot-city .dingwei-city {
+    display: block;
+    height: 14px;
+    line-height: 14px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    margin-top: 3px;
+    float: left;
+}
+/* 历史记录大盒子 */
+.ct-history {
+    width: 277px;
+    height: 50px;
+     margin: 20px 0 20px 0;
+}
+/* 历史记录 */
+#hot-city .history-text {
+    font-size: 12px;
+    color: #9f9f9f;
+    height: 12px;
+    line-height: 12px;
+    margin-bottom: 8px;
+    margin-top: 2px;
+    margin-left: -42px;
+    clear: both;
+}
+/* 历史记录四个城市 */
+#his-content ,#hotCity-content{
+    clear: both;
+    list-style: none;
+    width: 277px;
+}
+
+#hot-city .delete {
+    float: right;
+    width: 40px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 9px;
+    background-color: #f0f0f0;
+    font-size: 12px;
+    color: #868686;
+    cursor: pointer;
+    margin-right: 35px;
+}
+
+
+#hot-city .tit {
+    font-size: 12px;
+    color: #9f9f9f;
+    height: 12px;
+    line-height: 12px;
+    margin-bottom: 8px;
+    margin-top: 2px;
+    clear: both;
+}
+
+
+
+
+#hot-city .opts {
+    float: left;
+    width: 25%;
+    height: 28px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+/* 主要内容区 */
+.content-box {
+    height: 310px;
+    border: 1px;
+}
+
+.content {
+    height: 100%;
+    position: relative;
+}
+
+/* 气象台 */
+.content #txt-time {
+    font-size: 14px;
+    color: #fff;
+    opacity: .6;
+    height: 19px;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+/* 第一行 温度 */
+.content .temperature #txt-wendu {
+    display: inline-block;
+    font-size: 86px;
+    color: #fff;
+    height: 86px;
+    line-height: 86px;
+}
+
+/* 天气 */
+.content .temperature #txt-tianqi {
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+    line-height: 45px;
+    height: 45px;
+    margin-right: 24px;
+}
+
+/* 第一行空气质量 */
+#aqi {
+    display: inline-block;
+    position: relative;
+    margin-right: 24px;
+    cursor: pointer;
+    height: 24px;
+}
+
+#aqi .info-aqi {
+    border-radius: 18px;
+    height: 24px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #fff;
+    padding: 3px 10px 3px 3px;
+    background-color: #f0cc35;
+    display: block;
+}
+
+#aqi .info-aqi::before {
+    content: '';
+    float: left;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-image: url(https://mat1.gtimg.com/qqcdn/tupload/1630660670304.png);
+}
+
+#ls-warning {
+    width: 118px;
+    height: 27px;
+    display: inline-block;
+}
+
+/* 空气质量具体内容表格 */
+#air-window{
+    display: none;
+}
+#aqi:hover #air-window{
+    display: block;
+}
+
+#air-window .header{
+    background-color: #f0cc35;
+    border-radius: 6px 6px 0 0;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+/* 表格外壳 */
+#air-window .detail{
+    min-height: 126px;
+    overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px;
+}
+
+#air-window .detail .inner{
+    background: #fff;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+}
+/* 表格 */
+#air-window #tb-detail {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    table-layout: fixed;
+}
+
+#air-window #tb-detail tr {
+    height: 63px;
+}
+
+#air-window #tb-detail .line1 {
+    border-bottom: 1px solid #efefef;
+}
+
+#air-window #tb-detail .nth-2 {
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+}
+
+.popwindow .val {
+    font-size: 14px;
+    color: #555;
+    line-height: 24px;
+}
+
+.popwindow .titl {
+    font-size: 12px;
+    color: #9f9f9f;
+    line-height: 24px;
+}
+
+.popwindow {
+    position: absolute;
+    /* display: none; */
+    z-index: 2;
+    height: 169px;
+    width: 254px;
+    top: 36px;
+    left: 50%;
+    margin-left: -127px;
+}
+
+/* 第一行强对流预警 */
+#ls-warning .tag {
+    background-color: #86c5f7;
+    border-radius: 18px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 12px;
+    margin-right: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+#ls-warning .level01:hover .warning-window{
+    display: block;
+}
+
+
+/* 强对流预警 */
+#ls-warning .popwindow {
+    position: absolute;
+    display: none;
+    z-index: 2;
+    height: 169px;
+    width: 254px;
+    top: 36px;
+    left: 50%;
+    margin-left: -127px;
+}
+
+/* 强对流预警头部 */
+#ls-warning .popwindow  .header{
+    background-color: #86c5f7;
+    border-radius: 6px 6px 0 0;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+/* 强对流预警内容区 */
+#ls-warning .popwindow .detail{
+    min-height: 126px;
+    overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px;
+}
+#ls-warning .popwindow .detail .inner{
+    background: #fff;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+}
+#ls-warning .popwindow .detail .inner p{
+    padding: 14px 20px 5px;
+    font-size: 14px;
+    color: #555;
+    line-height: 24px;
+}
+
+#ct-other {
+    vertical-align: middle;
+    margin-bottom: 28px;
+}
+
+/* 第二行  风 湿度 气压 不限行 */
+#ct-other .item {
+    display: inline-block;
+    margin-right: 42px;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+}
+
+#ct-other .item .txt {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#ct-other .item .icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: 20px 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, .7);
+}
+
+/* 天气提示语 */
+.tips .txt-tips {
+    vertical-align: middle;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.tips .txt-tips::before {
+    content: '';
+    float: left;
+    height: 11px;
+    width: 11px;
+    margin-right: 13px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.tips .switch {
+    margin-left: 15px;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .7);
+}
+
+/* 右侧太阳大图片 */
+.weather-pic {
+    position: absolute;
+    top: 78px;
+    right: 80px;
+    width: 134px;
+    height: 134px;
+}
+
+/* 24小时具体天气 */
+.weather-24 {
+    height: 190px;
+    margin: 130px auto 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 14px 0 rgb(0 0 0 / 8%);
+    padding: 20px 30px 27px;
+    overflow: hidden;
+}
+
+/* 标题 */
+#title {
+    font-size: 18px;
+    color: #344665;
+    height: 21px;
+    line-height: 21px;
+    margin-bottom: 22px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+#cn-weather {
+    float: left;
+    font-size: 12px;
+    color: #8a9baf;
+    height: 21px;
+    line-height: 21px;
+}
+
+.weather-24 #title::before {
+    content: '';
+    float: left;
+    height: 7px;
+    width: 7px;
+    overflow: hidden;
+    margin-right: 10px;
+    background: #344665;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.btn-24 {
+    float: right;
+}
+
+/* 天气切换按钮 */
+.btn-24 #btn-left {
+    background-image: url(../images/btn-left.png);
+    margin-right: 8px;
+}
+
+.btn-24 #btn-right {
+    background-image: url(../images/bnt-right.png);
+    margin-right: 8px;
+}
+
+.btn-24 .btn {
+    display: inline-block;
+    float: left;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 0;
+}
+
+/* 24小时具体天气 */
+.weather-24 .weth-content-24 {
+    width: 4800px;
+    clear: both;
+}
+
+.weather-24 .weth-content-24 .weth-hover {
+    width: 4800px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    transition: margin 1s ease-in-out;
+    -webkit-transition: margin 1s ease-in-out;
+    -moz-transition: margin 1s ease-in-out;
+    -ms-transition: margin 1s ease-in-out;
+    -o-transition: margin 1s ease-in-out;
+}
+
+.weather-24 .weth-content-24 .weth-hover .item {
+    float: left;
+    width: 40px;
+    margin-right: 60px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+}
+
+.weth-content-24 .weth-hover .item .text-tem {
+    font-size: 18px;
+    color: #384c78;
+    line-height: 14px;
+}
+
+.weth-content-24 .weth-hover .item .text-time {
+    font-size: 14px;
+    color: #8a9baf;
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 24px;
+}
+
+.weth-content-24 .weth-hover .item img {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+
+/* 七日天气 */
+.weather-7 {
+    margin-bottom: 35px;
+}
+
+/* 清除浮动造成的下方元素上浮问题 */
+.weather-7::after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+}
+
+/* 左侧七日天气 */
+.weather-7 .days-7 {
+    float: left;
+    width: 740px;
+    height: 512px;
+    padding: 20px 0 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 14px 0 rgb(0 0 0 / 8%);
+}
+
+/* 标题 */
+.weather-7 .days-7 #title {
+    font-size: 18px;
+    color: #344665;
+    line-height: 25px;
+    height: 25px;
+    margin-bottom: 18px;
+    margin-left: 30px;
+}
+
+.weather-7 .days-7 #title::before {
+    content: '';
+    float: left;
+    height: 7px;
+    width: 7px;
+    overflow: hidden;
+    margin-right: 10px;
+    background: #344665;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.days-7 #weth-content-7 {
+    width: 740px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.days-7 .item {
+    width: 92px;
+    text-align: center;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+    padding: 11px 0 25px;
+}
+
+.days-7 .item img{
+    width: 30px;
+}
+
+/* 设置七日天气文字 */
+.days-7 .item .day {
+    font-size: 14px;
+    color: #384c78;
+    margin-bottom: 12px;
+    height: 14px;
+    line-height: 14px;
+}
+
+/* 昨日文字样式 */
+.days-7 .item.first .day {
+    color: #c2c2c2;
+}
+
+.days-7 .item.first .date {
+    color: #c2c2c2;
+}
+
+.days-7 .item.first .wind {
+    color: #c2c2c2;
+}
+
+.days-7 .item.first .weather {
+    color: #c2c2c2;
+}
+
+.days-7 .item .date {
+    font-size: 12px;
+    color: #8a9baf;
+    margin-bottom: 30px;
+    height: 12px;
+    line-height: 12px;
+}
+
+.days-7 .item .wind {
+    font-size: 12px;
+    color: #8a9baf;
+    line-height: 12px;
+    height: 12px;
+}
+
+
+.days-7 .item .weather {
+    font-size: 14px;
+    color: #384c78;
+    line-height: 14px;
+    height: 14px;
+}
+
+.days-7 .item.second {
+    background: #f8faff;
+}
+
+.days-7 .item .ct-night {
+    margin-top: 174px;
+    margin-bottom: 24px;
+}
+
+/* 折线图 */
+.days-7 #container {
+    width: 720px;
+    position: absolute;
+    top: 120px;
+}
+
+/* 15日天气链接 */
+#link-15 {
+    float: right;
+    background: #f8faff;
+    border: 1px solid #dce5f0;
+    border-radius: 37px;
+    font-size: 12px;
+    color: #384c78;
+    line-height: 26px;
+    height: 26px;
+    width: 100px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+/* 右侧生活指数 */
+.weather-live {
+    float: right;
+    width: 430px;
+    position: relative;
+}
+
+/* live左右切换按钮 */
+.btn-live {
+    float: right;
+    margin-top: 7px;
+}
+
+.btn-live #btn-left {
+    background-image: url(../images/btn-left.png);
+    margin-right: 8px;
+}
+
+.btn-live #btn-right {
+    background-image: url(../images/bnt-right.png);
+    margin-right: 8px;
+}
+
+.btn-live .btn {
+    display: inline-block;
+    float: left;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 0;
+}
+
+.weather-live #title {
+    float: left;
+    font-size: 18px;
+    color: #344665;
+    height: 21px;
+    line-height: 21px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.weather-live #title::after {
+    content: '';
+    float: left;
+    height: 7px;
+    width: 7px;
+    overflow: hidden;
+    margin-right: 10px;
+    background: #344665;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+/* 生活指数具体内容 */
+.weather-live .live-pages {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    width: 440px;
+    height: 488px;
+    margin-left: -5px;
+    padding-top: 18px;
+}
+
+/* 左live */
+.live-pages #live1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 440px;
+}
+
+/* 右live */
+.live-pages #live2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 440px;
+}
+
+/* 大盒子 */
+.pages-box {
+    width: 890px;
+    transition: margin 1s;
+    -webkit-transition: margin 1s;
+    -moz-transition: margin 1s;
+    -ms-transition: margin 1s;
+    -o-transition: margin 1s;
+}
+
+/* 每项 */
+.pages-box .item {
+    height: 140px;
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 0 14px 0 rgb(0 0 0 / 8%);
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.pages-box .item .icon {
+    height: 34px;
+    width: 34px;
+    display: block;
+    margin: 0 auto 12px;
+    font-size: 34px;
+}
+
+.pages-box .item .ct-sub {
+    height: 140px;
+    width: 100%;
+    padding-top: 38px;
+    transition: margin .5s ease-in-out;
+    text-align: center;
+}
+
+.pages-box .item .content {
+    font-size: 16px;
+    color: #384c78;
+    line-height: 22px;
+}
+
+.pages-box .item.odd {
+    margin-right: 14px;
+}
+
+.pages-box .item .ct-detail {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    display: table;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* 生活指数隐藏部分 */
+.pages-box .item .ct-detail .detail {
+    vertical-align: middle;
+    text-align: left;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    display: table-cell;
+    font-size: 13px;
+    color: #384c78;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+/* 页脚 */
+#footer {
+    height: 264px;
+    background: #3a4570;
+    margin-top: 40px;
+}
+
+#footer #chinaWeather-pic {
+    text-align: center;
+    padding: 50px 0 35px;
+}
+
+#footer #chinaWeather-pic img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 31px;
+}
